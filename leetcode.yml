@@ -1,1 +1,16 @@
+name: LeetCode Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight
+  workflow_dispatch:      # Allows manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: real-ateesh/leetcode-profile-README@v2
+        with:
+          LeetcodeUsername: AaryaRDeshpande
 
